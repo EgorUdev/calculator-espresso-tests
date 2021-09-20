@@ -63,7 +63,6 @@ class DataEntryTest{
 
     @Test
     fun test_SeparatorLogic() {
-
         onView(withId(R.id.btn_1)).perform(click())
         onView(withId(R.id.btn_decimal)).perform(click())
         onView(withId(R.id.btn_5)).perform(click())
