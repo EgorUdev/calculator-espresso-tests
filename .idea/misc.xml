@@ -3,7 +3,12 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="../../../../layout/custom_preview.xml" value="0.2596463022508039" />
+        <entry key="../../.gradle/caches/transforms-2/files-2.1/a6ca19cb3dd4f543dceae3433acaf5bc/jetified-commons-5.34.25/res/layout/dialog_line_color_picker.xml" value="0.153125" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.19166666666666668" />
+        <entry key="app/src/main/res/layout/activity_settings.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/widget.xml" value="0.19739583333333333" />
+        <entry key="app/src/main/res/layout/widget_config.xml" value="0.2" />
       </map>
     </option>
   </component>

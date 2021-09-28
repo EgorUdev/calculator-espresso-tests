@@ -72,6 +72,48 @@ class OperationsTest{
     }
 
     @Test
+    fun test_percents() {
+        onView(withId(R.id.btn_5)).perform(click())
+        onView(withId(R.id.btn_0)).perform(click())
+        onView(withId(R.id.btn_0)).perform(click())
+        onView(withId(R.id.btn_multiply)).perform(click())
+        onView(withId(R.id.btn_2)).perform(click())
+        onView(withId(R.id.btn_5)).perform(click())
+        onView(withId(R.id.btn_percent)).perform(click())
+        onView(allOf(withId(R.id.result),withText("125"))).check(matches(isDisplayed()))
+        onView(withId(R.id.btn_clear)).perform(longClick())
+        onView(allOf(withId(R.id.result),withText("0"))).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun test_power() {
+        onView(withId(R.id.btn_2)).perform(click())
+        onView(withId(R.id.btn_power)).perform(click())
+        onView(withId(R.id.btn_4)).perform(click())
+        onView(allOf(withId(R.id.result),withText("2^4"))).check(matches(isDisplayed()))
+        onView(withId(R.id.btn_multiply)).perform(click())
+        onView(allOf(withId(R.id.result),withText("16×"))).check(matches(isDisplayed()))
+        onView(withId(R.id.btn_2)).perform(click())
+        onView(withId(R.id.btn_equals)).perform(click())
+        onView(allOf(withId(R.id.result),withText("32"))).check(matches(isDisplayed()))
+        onView(withId(R.id.btn_clear)).perform(longClick())
+        onView(allOf(withId(R.id.result),withText("0"))).check(matches(isDisplayed()))
+    }
+
+    @Test
+    fun test_root() {
+        onView(withId(R.id.btn_root)).perform(click())
+        onView(allOf(withId(R.id.result),withText("1√"))).check(matches(isDisplayed()))
+        onView(withId(R.id.btn_6)).perform(click())
+        onView(withId(R.id.btn_4)).perform(click())
+        onView(allOf(withId(R.id.result),withText("1√64"))).check(matches(isDisplayed()))
+        onView(withId(R.id.btn_equals)).perform(click())
+        onView(allOf(withId(R.id.result),withText("8"))).check(matches(isDisplayed()))
+        onView(withId(R.id.btn_clear)).perform(longClick())
+        onView(allOf(withId(R.id.result),withText("0"))).check(matches(isDisplayed()))
+    }
+
+    @Test
     fun test_sequence() {
         onView(withId(R.id.btn_5)).perform(click())
         onView(withId(R.id.btn_minus)).perform(click())
